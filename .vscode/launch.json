@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                "PYSPARK_PYTHON": "python",
+                "PYSPARK_DRIVER_PYTHON": "python"
+            }
+        },
+        {
+            "name": "PySpark: Run Pipeline",
+            "type": "python",
+            "request": "launch",
+            "program": "main.py",
+            "console": "integratedTerminal",
+            "env": {
+                "PYSPARK_PYTHON": "python",
+                "PYSPARK_DRIVER_PYTHON": "python",
+                "SPARK_HOME": "${env:SPARK_HOME}",
+                "JAVA_HOME": "${env:JAVA_HOME}"
+            }
+        }
+    ]
+}
